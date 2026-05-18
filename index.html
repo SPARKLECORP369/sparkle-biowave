@@ -1,18 +1,272 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>BioWave™</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BioWave™ | AI Stress Regulation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      flex-direction:column;
+      background:
+      radial-gradient(circle at center,#0affc620 0%,transparent 45%),
+      linear-gradient(to bottom,#050505,#0b1020);
+      padding:20px;
+    }
+
+    .logo{
+      font-size:22px;
+      letter-spacing:4px;
+      color:#0affc6;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    h1{
+      font-size:80px;
+      font-weight:900;
+      line-height:0.95;
+      max-width:1000px;
+      margin-bottom:25px;
+    }
+
+    .highlight{
+      color:#0affc6;
+      text-shadow:0 0 25px #0affc6;
+    }
+
+    .subtitle{
+      max-width:700px;
+      font-size:22px;
+      color:#cfcfcf;
+      line-height:1.6;
+      margin-bottom:40px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .btn{
+      padding:16px 34px;
+      border-radius:50px;
+      font-size:16px;
+      text-decoration:none;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .primary{
+      background:#0affc6;
+      color:black;
+    }
+
+    .primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 0 30px #0affc680;
+    }
+
+    .secondary{
+      border:1px solid #0affc6;
+      color:#0affc6;
+    }
+
+    .secondary:hover{
+      background:#0affc615;
+    }
+
+    .glow{
+      width:350px;
+      height:350px;
+      background:#0affc6;
+      position:absolute;
+      border-radius:50%;
+      filter:blur(140px);
+      opacity:0.15;
+      z-index:-1;
+    }
+
+    .section{
+      padding:120px 10%;
+    }
+
+    .section-title{
+      font-size:52px;
+      margin-bottom:25px;
+      font-weight:800;
+    }
+
+    .section-text{
+      font-size:20px;
+      color:#c7c7c7;
+      line-height:1.8;
+      max-width:900px;
+    }
+
+    .cards{
+      margin-top:60px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#101010;
+      border:1px solid #1d1d1d;
+      padding:35px;
+      border-radius:28px;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      border-color:#0affc6;
+      transform:translateY(-8px);
+      box-shadow:0 0 30px #0affc620;
+    }
+
+    .card h3{
+      color:#0affc6;
+      margin-bottom:18px;
+      font-size:28px;
+    }
+
+    .card p{
+      color:#bdbdbd;
+      line-height:1.7;
+      font-size:17px;
+    }
+
+    footer{
+      text-align:center;
+      padding:60px 20px;
+      border-top:1px solid #151515;
+      color:#6e6e6e;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:52px;
+      }
+
+      .subtitle{
+        font-size:18px;
+      }
+
+      .section-title{
+        font-size:40px;
+      }
+
+    }
+
+  </style>
+
 </head>
 
-<body style="background:black; color:white; text-align:center; font-family:Arial; padding-top:100px;">
+<body>
 
-<h1 style="color:#0affc6; font-size:60px;">
-BioWave™
-</h1>
+  <div class="hero">
 
-<p style="font-size:22px;">
-AI-Powered Calm Technology
-</p>
+    <div class="glow"></div>
+
+    <div class="logo">
+      BIOWAVE™
+    </div>
+
+    <h1>
+      YOUR <span class="highlight">STRESS</span><br>
+      EXIT BUTTON
+    </h1>
+
+    <p class="subtitle">
+      AI-powered wearable calm technology that predicts stress and helps your body recover faster through NeuroHaptic™ regulation.
+    </p>
+
+    <div class="buttons">
+
+      <a href="#" class="btn primary">
+        Explore Technology
+      </a>
+
+      <a href="#" class="btn secondary">
+        View Science
+      </a>
+
+    </div>
+
+  </div>
+
+  <section class="section">
+
+    <h2 class="section-title">
+      Why BioWave™?
+    </h2>
+
+    <p class="section-text">
+      Modern stress solutions are reactive. BioWave™ is proactive.
+      Using AI-powered HRV analysis and NeuroHaptic™ stimulation,
+      BioWave™ helps regulate the body’s stress response before overwhelm escalates.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Predict</h3>
+        <p>
+          Advanced HRV pattern analysis detects stress spikes early using AI-driven physiological monitoring.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Calm</h3>
+        <p>
+          NeuroHaptic™ pulses activate parasympathetic calming pathways naturally and safely.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Recover</h3>
+        <p>
+          Closed-loop autonomic regulation continuously adapts to help users recover faster from stress.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 BioWave™ by Sparkle Corporations
+  </footer>
 
 </body>
+
 </html>
