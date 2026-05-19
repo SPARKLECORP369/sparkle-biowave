@@ -2,411 +2,484 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>BioWave™ | AI Stress Regulation</title>
+<title>BioWave™ | AI Stress Regulation</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    body{
-      font-family:'Inter',sans-serif;
-      background:#050505;
-      color:white;
-      overflow-x:hidden;
-    }
+body{
+font-family:'Inter',sans-serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
 
-    .hero{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      flex-direction:column;
-      background:
-      radial-gradient(circle at center,#0affc620 0%,transparent 45%),
-      linear-gradient(to bottom,#050505,#0b1020);
-      padding:20px;
-    }
+.hero{
 
-    .logo{
-      font-size:22px;
-      letter-spacing:4px;
-      color:#0affc6;
-      margin-bottom:20px;
-      font-weight:700;
-    }
+min-height:100vh;
 
-    h1{
-      font-size:80px;
-      font-weight:900;
-      line-height:0.95;
-      max-width:1000px;
-      margin-bottom:25px;
-    }
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
 
-    .highlight{
-      color:#0affc6;
-      text-shadow:0 0 25px #0affc6;
-    }
+text-align:center;
 
-    .subtitle{
-      max-width:700px;
-      font-size:22px;
-      color:#cfcfcf;
-      line-height:1.6;
-      margin-bottom:40px;
-    }
+padding:80px 20px;
 
-    .buttons{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
+background:
+radial-gradient(circle at center,#0affc620 0%,transparent 40%),
+linear-gradient(to bottom,#050505,#081018);
+}
 
-    .btn{
-      padding:16px 34px;
-      border-radius:50px;
-      font-size:16px;
-      text-decoration:none;
-      transition:0.3s;
-      font-weight:600;
-    }
+.logo{
 
-    .primary{
-      background:#0affc6;
-      color:black;
-    }
+font-size:20px;
+letter-spacing:5px;
 
-    .primary:hover{
-      transform:translateY(-3px);
-      box-shadow:0 0 30px #0affc680;
-    }
+color:#0affc6;
 
-    .secondary{
-      border:1px solid #0affc6;
-      color:#0affc6;
-    }
+font-weight:700;
 
-    .secondary:hover{
-      background:#0affc615;
-    }
+margin-bottom:25px;
+}
 
-    .bracelet{
-  width:min(500px,85vw);
-  margin-bottom:40px;
-  filter:
-  drop-shadow(0 0 40px #0affc680);
+h1{
 
-  animation:float 4s ease-in-out infinite;
+font-size:clamp(52px,8vw,110px);
+
+line-height:0.92;
+
+font-weight:900;
+
+max-width:1000px;
+
+margin-bottom:30px;
+}
+
+.highlight{
+
+color:#0affc6;
+
+text-shadow:
+0 0 25px #0affc680;
+}
+
+.subtitle{
+
+max-width:760px;
+
+font-size:clamp(18px,2vw,24px);
+
+line-height:1.7;
+
+color:#cfcfcf;
+
+margin-bottom:50px;
+
+padding:0 15px;
+}
+
+.bracelet{
+
+width:min(360px,75vw);
+
+margin-bottom:45px;
+
+filter:
+drop-shadow(0 0 55px #0affc660);
+
+animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
 
-  0%{
-    transform:translateY(0px);
-  }
+0%{
+transform:translateY(0px);
+}
 
-  50%{
-    transform:translateY(-18px);
-  }
+50%{
+transform:translateY(-16px);
+}
 
-  100%{
-    transform:translateY(0px);
-  }
+100%{
+transform:translateY(0px);
+}
 
-} 
-    
-    .glow{
-      width:350px;
-      height:350px;
-      background:#0affc6;
-      position:absolute;
-      border-radius:50%;
-      filter:blur(140px);
-      opacity:0.15;
-      z-index:-1;
-    }
+}
 
-    .section{
-      padding:120px 10%;
-    }
+.buttons{
 
-    .section-title{
-      font-size:52px;
-      margin-bottom:25px;
-      font-weight:800;
-    }
+display:flex;
+gap:20px;
 
-    .section-text{
-      font-size:20px;
-      color:#c7c7c7;
-      line-height:1.8;
-      max-width:900px;
-    }
+flex-wrap:wrap;
 
-    .cards{
-      margin-top:60px;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
+justify-content:center;
+}
 
-    .card{
-      background:#101010;
-      border:1px solid #1d1d1d;
-      padding:35px;
-      border-radius:28px;
-      transition:0.4s;
-    }
+.btn{
 
-    .card:hover{
-      border-color:#0affc6;
-      transform:translateY(-8px);
-      box-shadow:0 0 30px #0affc620;
-    }
+padding:16px 34px;
 
-    .card h3{
-      color:#0affc6;
-      margin-bottom:18px;
-      font-size:28px;
-    }
+border-radius:50px;
 
-    .card p{
-      color:#bdbdbd;
-      line-height:1.7;
-      font-size:17px;
-    }
+font-size:16px;
 
-    footer{
-      text-align:center;
-      padding:60px 20px;
-      border-top:1px solid #151515;
-      color:#6e6e6e;
-      font-size:14px;
-    }
+text-decoration:none;
 
-    @media(max-width:768px){
+font-weight:600;
 
-      h1{
-        font-size:52px;
-      }
+transition:0.3s;
+}
 
-      .subtitle{
-        font-size:18px;
-      }
+.primary{
 
-      .section-title{
-        font-size:40px;
-      }
+background:#0affc6;
 
-    }
+color:black;
+}
 
-  </style>
+.primary:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 0 30px #0affc680;
+}
+
+.secondary{
+
+border:1px solid #0affc6;
+
+color:#0affc6;
+}
+
+.secondary:hover{
+
+background:#0affc615;
+}
+
+.section{
+
+padding:120px 10%;
+}
+
+.section-title{
+
+font-size:clamp(40px,5vw,60px);
+
+font-weight:800;
+
+margin-bottom:25px;
+}
+
+.section-text{
+
+font-size:20px;
+
+line-height:1.8;
+
+max-width:900px;
+
+color:#bfbfbf;
+}
+
+.cards{
+
+margin-top:70px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+}
+
+.card{
+
+background:
+linear-gradient(
+145deg,
+#121212,
+#0b0b0b);
+
+padding:40px;
+
+border-radius:28px;
+
+border:
+1px solid #1d1d1d;
+
+transition:0.4s;
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+border-color:#0affc6;
+
+box-shadow:
+0 0 40px #0affc620;
+}
+
+.card h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+color:#0affc6;
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#bdbdbd;
+}
+
+.tech-grid{
+
+margin-top:70px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+}
+
+.tech-box{
+
+background:
+linear-gradient(
+145deg,
+#111111,
+#0c0c0c);
+
+padding:40px;
+
+border-radius:30px;
+
+border:
+1px solid #1f1f1f;
+
+transition:0.4s;
+}
+
+.tech-box:hover{
+
+transform:translateY(-10px);
+
+border-color:#0affc6;
+
+box-shadow:
+0 0 40px #0affc620;
+}
+
+.tech-number{
+
+font-size:70px;
+
+font-weight:900;
+
+color:#0affc620;
+
+margin-bottom:10px;
+}
+
+.tech-box h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+color:#0affc6;
+}
+
+.tech-box p{
+
+line-height:1.8;
+
+color:#bdbdbd;
+}
+
+footer{
+
+padding:60px 20px;
+
+text-align:center;
+
+border-top:
+1px solid #151515;
+
+color:#6e6e6e;
+
+font-size:14px;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding-top:120px;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-  <div class="hero">
+<section class="hero">
 
-    <div class="glow"></div>
+<div class="logo">
+BIOWAVE™
+</div>
 
-    <div class="logo">
-      BIOWAVE™
-    </div>
+<h1>
+YOUR <span class="highlight">STRESS</span><br>
+EXIT BUTTON
+</h1>
 
-    <h1>
-      YOUR <span class="highlight">STRESS</span><br>
-      EXIT BUTTON
-    </h1>
+<p class="subtitle">
+AI-powered wearable calm technology that predicts stress and helps your body recover faster through NeuroHaptic™ regulation.
+</p>
 
-    <p class="subtitle">
-      AI-powered wearable calm technology that predicts stress and helps your body recover faster through NeuroHaptic™ regulation.
-    </p>
-
-    <img src="Gemini_Generated_Image_-removebg-preview.png"
+<img src="Gemini_Generated_Image_-removebg-preview.png"
 class="bracelet">
 
-    <div class="buttons">
+<div class="buttons">
 
-      <a href="#" class="btn primary">
-        Explore Technology
-      </a>
+<a href="#" class="btn primary">
+Explore Technology
+</a>
 
-      <a href="#" class="btn secondary">
-        View Science
-      </a>
+<a href="#" class="btn secondary">
+View Science
+</a>
 
-    </div>
-
-  </div>
-
-  <section class="section">
-
-    <h2 class="section-title">
-      Why BioWave™?
-    </h2>
-
-    <p class="section-text">
-      Modern stress solutions are reactive. BioWave™ is proactive.
-      Using AI-powered HRV analysis and NeuroHaptic™ stimulation,
-      BioWave™ helps regulate the body’s stress response before overwhelm escalates.
-    </p>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Predict</h3>
-        <p>
-          Advanced HRV pattern analysis detects stress spikes early using AI-driven physiological monitoring.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Calm</h3>
-        <p>
-          NeuroHaptic™ pulses activate parasympathetic calming pathways naturally and safely.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Recover</h3>
-        <p>
-          Closed-loop autonomic regulation continuously adapts to help users recover faster from stress.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-<section class="section how-it-works">
-
-  <h2 class="section-title">
-    How BioWave™ Works
-  </h2>
-
-  <p class="section-text">
-    BioWave™ combines AI-powered biometric analysis with NeuroHaptic™ calming technology to detect stress early and regulate the body’s nervous system in real-time.
-  </p>
-
-  <div class="tech-grid">
-
-    <div class="tech-box">
-      <div class="tech-number">01</div>
-
-      <h3>AI HRV Analysis</h3>
-
-      <p>
-        BioWave™ continuously analyzes Heart Rate Variability (HRV) patterns to identify early signs of stress before emotional overwhelm occurs.
-      </p>
-    </div>
-
-    <div class="tech-box">
-      <div class="tech-number">02</div>
-
-      <h3>NeuroHaptic™ Pulses</h3>
-
-      <p>
-        Gentle haptic pulse sequences stimulate calming parasympathetic pathways to help stabilize the body’s stress response naturally.
-      </p>
-    </div>
-
-    <div class="tech-box">
-      <div class="tech-number">03</div>
-
-      <h3>Closed-Loop Recovery</h3>
-
-      <p>
-        The AI adapts in real time using biometric feedback, creating a personalized stress recovery system unique to every user.
-      </p>
-    </div>
-
-  </div>
+</div>
 
 </section>
-  
-  .tech-grid{
-  margin-top:70px;
 
-  display:grid;
-  grid-template-columns:
-  repeat(auto-fit,minmax(300px,1fr));
+<section class="section">
 
-  gap:35px;
-}
+<h2 class="section-title">
+Why BioWave™?
+</h2>
 
-.tech-box{
+<p class="section-text">
+Modern stress solutions are reactive. BioWave™ is proactive. Using AI-powered HRV analysis and NeuroHaptic™ stimulation, BioWave™ helps regulate the body’s stress response before overwhelm escalates.
+</p>
 
-  background:
-  linear-gradient(
-  145deg,
-  #111111,
-  #0c0c0c);
+<div class="cards">
 
-  border:
-  1px solid #1f1f1f;
+<div class="card">
+<h3>Predict</h3>
 
-  padding:40px;
+<p>
+Advanced HRV pattern analysis detects stress spikes early using AI-driven physiological monitoring.
+</p>
+</div>
 
-  border-radius:30px;
+<div class="card">
+<h3>Calm</h3>
 
-  transition:0.4s;
-}
+<p>
+NeuroHaptic™ pulses activate parasympathetic calming pathways naturally and safely.
+</p>
+</div>
 
-.tech-box:hover{
+<div class="card">
+<h3>Recover</h3>
 
-  transform:translateY(-10px);
+<p>
+Closed-loop autonomic regulation continuously adapts to help users recover faster from stress.
+</p>
+</div>
 
-  border-color:#0affc6;
+</div>
 
-  box-shadow:
-  0 0 40px #0affc620;
-}
+</section>
 
-.tech-number{
+<section class="section">
 
-  font-size:70px;
+<h2 class="section-title">
+How BioWave™ Works
+</h2>
 
-  font-weight:900;
+<p class="section-text">
+BioWave™ combines AI-powered biometric analysis with NeuroHaptic™ calming technology to detect stress early and regulate the body’s nervous system in real-time.
+</p>
 
-  color:#0affc620;
+<div class="tech-grid">
 
-  margin-bottom:10px;
-}
+<div class="tech-box">
 
-.tech-box h3{
+<div class="tech-number">
+01
+</div>
 
-  font-size:30px;
+<h3>AI HRV Analysis</h3>
 
-  margin-bottom:20px;
+<p>
+BioWave™ continuously analyzes Heart Rate Variability patterns to identify stress before emotional overload occurs.
+</p>
 
-  color:#0affc6;
-}
+</div>
 
-.tech-box p{
+<div class="tech-box">
 
-  color:#bdbdbd;
+<div class="tech-number">
+02
+</div>
 
-  line-height:1.8;
+<h3>NeuroHaptic™ Pulses</h3>
 
-  font-size:17px;
-}
-  <footer>
-    © 2026 BioWave™ by Sparkle Corporations
-  </footer>
+<p>
+Gentle haptic pulse sequences stimulate calming parasympathetic pathways naturally and safely.
+</p>
+
+</div>
+
+<div class="tech-box">
+
+<div class="tech-number">
+03
+</div>
+
+<h3>Closed-Loop Recovery</h3>
+
+<p>
+Adaptive AI continuously personalizes stress recovery based on live biometric feedback.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 BioWave™ by Sparkle Corporations
+</footer>
 
 </body>
-
 </html>
