@@ -379,6 +379,118 @@ translateY(-12px)
 scale(1.03);
 }
   
+.graph-container{
+
+margin-top:80px;
+
+height:280px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+180deg,
+#0d1117,
+#050505);
+
+position:relative;
+
+overflow:hidden;
+
+border:
+1px solid #151515;
+}
+
+.graph-line{
+
+position:absolute;
+
+width:200%;
+
+height:100%;
+
+background:
+url("https://svgshare.com/i/15jv.svg");
+
+background-size:contain;
+
+background-repeat:repeat-x;
+
+animation:moveGraph 12s linear infinite;
+
+opacity:0.9;
+}
+
+@keyframes moveGraph{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+.stats-grid{
+
+margin-top:60px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+}
+
+.stat-box{
+
+background:
+linear-gradient(
+145deg,
+#111111,
+#0a0a0a);
+
+padding:35px;
+
+border-radius:28px;
+
+text-align:center;
+
+border:
+1px solid #1d1d1d;
+
+transition:0.4s;
+}
+
+.stat-box:hover{
+
+transform:translateY(-10px);
+
+border-color:#0affc6;
+
+box-shadow:
+0 0 35px #0affc620;
+}
+
+.stat-box h3{
+
+font-size:56px;
+
+color:#0affc6;
+
+margin-bottom:12px;
+}
+
+.stat-box p{
+
+color:#bdbdbd;
+
+font-size:18px;
+}
+  
 footer{
 
 padding:60px 20px;
@@ -557,26 +669,47 @@ Monitor stress levels, track HRV recovery, activate Calm Mode, and receive AI-po
 
 </section>  
 
-<section class="section app-section">
-
-<h2 class="section-title">
-BioWave™ Mobile Experience
-</h2>
-
-<p class="section-text">
-Monitor stress levels, track HRV recovery, activate Calm Mode, and receive AI-powered wellness insights in real time.
-</p>
-
-<div class="app-showcase">
-
-<img src="app1.png" class="phone left-phone">
-
-<img src="app2.png" class="phone right-phone">
-
 </div>
 
 </section>
 
+<section class="section graph-section">
+
+<h2 class="section-title">
+Real-Time HRV Intelligence
+</h2>
+
+<p class="section-text">
+BioWave™ continuously monitors Heart Rate Variability and autonomic recovery patterns to predict and regulate stress in real time.
+</p>
+
+<div class="graph-container">
+
+<div class="graph-line"></div>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h3>22%</h3>
+<p>HRV Improvement</p>
+</div>
+
+<div class="stat-box">
+<h3>38%</h3>
+<p>Faster Recovery</p>
+</div>
+
+<div class="stat-box">
+<h3>87%</h3>
+<p>Positive Response</p>
+</div>
+
+</div>
+
+</section>
+  
 <footer>
 © 2026 BioWave™ by Sparkle Corporations
 </footer>
